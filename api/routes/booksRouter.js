@@ -6,7 +6,10 @@ import { isValid } from "../utils/isValidated.js"
 const booksRouter = express.Router();
 
 booksRouter.get('/', booksController.getBooks)
+booksRouter.get('/new', (req, res) => {
 
+    res.send("title")
+})
 booksRouter.post('/', isValid(bookSchema), booksController.createBook)
 booksRouter.put('/:id',  (req, res)=>{
     const { id } = req.params;

@@ -8,7 +8,7 @@ import { usersRouter } from "./usersRouter.js";
 
 function routerApi(api) {
     api.use('/books', booksRouter ),
-    api.use('/users', usersRouter ),
+    api.use('/register', usersRouter ),
     api.use('/rentals', rentalsRouter ),
     api.use('/clients', clientsRouter )
 }

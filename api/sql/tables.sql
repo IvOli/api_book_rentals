@@ -1,10 +1,12 @@
 CREATE TABLE public.users
 (
     user_id serial NOT NULL,
+    name character varying NOT NULL,
     birthdate date NOT NULL,
+    password character varying NOT NULL,
     email character varying NOT NULL UNIQUE,
     app_name character varying NOT NULL,
-    name character varying NOT NULL,
+    
     last_update timestamp without time zone NOT NULL DEFAULT now(),
     PRIMARY KEY (user_id)
 );
